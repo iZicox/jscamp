@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #3b4550;
+  --primary-dark: #0a3d66;
+  --primary-hover: #0d5ba8;
+  --primary-light: #09f;
+  --background: #06182a;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --input-bg: #1e293b;
+  --hsla-example: hsla(210, 100%, 56%, 1);
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+body {
+  font-family: system-ui;
+  background-color: var(--background);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+svg {
+  width: 3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--text-muted);
+  padding: 0.5rem 1rem;
+}
+
+header > :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+header > :nth-of-type(1) > :nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav > a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+header > :nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > :nth-of-type(2) > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: var(--primary-dark);
+  border-radius: 1.5rem;
+}
+
+header  img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+/*section 1*/
+main > :first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem;
+  min-width: 55rem;
+}
+
+main > :first-child > h1 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+main > :first-child > p {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+section:first-of-type > div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  background-color: var(--input-bg);
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px var(--shadow);
+}
+
+section:first-of-type svg {
+  width: 1.5rem;
+}
+
+section:first-of-type form:first-of-type {
+  flex: 1;
+}
+
+section:first-of-type form input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+section:first-of-type  div:first-of-type > input::placeholder{
+  color: var(--text-muted);
+  padding: 1rem;
+}
+
+
+/*
+section:first-of-type select {
+  appearance: none;
+ background:var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 3rem;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 1rem;
+  width: auto;
+  height: 3rem;
+  padding: 0.2rem 0.5rem;
+}*/
+
+section:first-of-type > form:nth-last-of-type(2) > div {
+  background-color: red;
+  width: 100px;
+  height: 50px;
+}
