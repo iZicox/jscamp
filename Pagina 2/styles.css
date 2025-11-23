@@ -26,7 +26,7 @@
   font-display: swap;
   font-weight: 100 900;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 body {
@@ -51,31 +51,31 @@ header {
   padding: 0.5rem 1rem;
 }
 
-header > :first-child {
+header> :first-child {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-header > :nth-of-type(1) > :nth-of-type(1) {
+header> :nth-of-type(1)> :nth-of-type(1) {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-nav > a {
+nav>a {
   text-decoration: none;
   color: var(--text-muted);
 }
 
-header > :nth-of-type(2) {
+header> :nth-of-type(2) {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-header > :nth-of-type(2) > :first-child {
+header> :nth-of-type(2)> :first-child {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +86,7 @@ header > :nth-of-type(2) > :first-child {
   border-radius: 1.5rem;
 }
 
-header  img {
+header img {
   width: 4rem;
   border-radius: 50%;
 }
@@ -100,7 +100,7 @@ main {
 }
 
 /*section 1*/
-main > :first-child {
+main> :first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,18 +108,19 @@ main > :first-child {
   min-width: 55rem;
 }
 
-main > :first-child > h1 {
+main> :first-child>h1 {
   margin-top: 1rem;
   text-align: center;
 }
 
-main > :first-child > p {
+main> :first-child>p {
   margin-top: 0.5rem;
   text-align: center;
   color: var(--text-muted);
 }
 
-section:first-of-type > div:first-of-type {
+/*barra de busqueda*/
+section:first-of-type>div:first-of-type {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -129,6 +130,7 @@ section:first-of-type > div:first-of-type {
   padding: 0 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px var(--shadow);
+  border: 1px solid var(--border);
 }
 
 section:first-of-type svg {
@@ -148,28 +150,19 @@ section:first-of-type form input {
   width: 100%;
 }
 
-section:first-of-type  div:first-of-type > input::placeholder{
+section:first-of-type div:first-of-type>input::placeholder {
   color: var(--text-muted);
   padding: 1rem;
 }
 
-
-/*
 section:first-of-type select {
   appearance: none;
- background:var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 3rem;
-  color: var(--text-secondary);
-  font: inherit;
-  font-size: 1rem;
-  width: auto;
-  height: 3rem;
-  padding: 0.2rem 0.5rem;
-}*/
+  /* estándar */
+  -webkit-appearance: none;
+  /* Safari/Chrome */
+  -moz-appearance: none;
 
-section:first-of-type > form:nth-last-of-type(2) > div {
-  background-color: red;
-  width: 100px;
-  height: 50px;
+  background: none;
+  border: none;
+
 }
