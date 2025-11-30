@@ -37,6 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
+
 }
 
 svg {
@@ -97,6 +98,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+
 }
 
 /*section 1*/
@@ -114,6 +116,7 @@ main> :first-child>h1 {
   text-align: center;
   font-size: 4rem;
 }
+
 /*subtitulo*/
 main> :first-child>p {
   margin-top: 0.5rem;
@@ -135,6 +138,7 @@ section:first-of-type>div:first-of-type {
   box-shadow: 0 10px 15px -3px var(--shadow);
   border: 1px solid var(--border);
 }
+
 /*icono busqueda*/
 section:first-of-type svg {
   width: 2rem;
@@ -143,6 +147,7 @@ section:first-of-type svg {
 section:first-of-type form:first-of-type {
   flex: 1;
 }
+
 /*placeholder*/
 section:first-of-type form input {
   background: transparent;
@@ -158,6 +163,7 @@ section:first-of-type div:first-of-type>input::placeholder {
   color: var(--text-muted);
   padding: 1rem;
 }
+
 /*filtros*/
 section:first-of-type select {
   color: var(--text-primary);
@@ -173,10 +179,62 @@ section:first-of-type select {
   background-image: url();
   background-position: right 0.5rem center;
   margin-right: 1rem;
+  box-shadow: 0 10px 15px -3px var(--shadow);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
 
-  &:hover{
+  &:hover {
     background-color: var(--primary-hover);
     color: var(--text-primary);
   }
 
+}
+
+/* resultado de busqueda */
+
+table caption {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  border: 1px solid var(--border);
+  border-radius: 1.3rem;
+}
+
+table>tr {
+  border-bottom: 1px solid var(--border);
+}
+
+table td {
+  padding: 2rem;
+
+}
+
+table td>h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+
+}
+
+table td>span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+td>button {
+  border: none;
+  background-color: var(--primary-dark);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
 }
