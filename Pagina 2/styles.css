@@ -120,7 +120,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-
+  padding-bottom: 5rem;
 }
 
 /*section 1 layout flex*/
@@ -223,6 +223,7 @@ table caption {
 
 table {
   border: 1px solid var(--border);
+  border-spacing: 0; /* hace que los bordes de las celdas se unan a los laterales */
   border-radius: 1.3rem;
 }
 
@@ -232,7 +233,12 @@ table>tr {
 
 table td {
   padding: 2rem;
+  border-bottom:1px solid var(--border);
 
+}
+
+table tr:last-child td {
+  border-bottom: none;
 }
 
 table td>h3 {
@@ -251,12 +257,13 @@ td>button {
   border: none;
   background-color: var(--primary-dark);
   color: var(--text-primary);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 8rem;
   height: 3rem;
   border-radius: 0.5rem;
 
   &:hover {
     background-color: var(--primary-hover);
+    cursor: pointer;
   }
 }
